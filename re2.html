@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brown Bean Coffee House - Release 2</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5efe6;
+            background-image: radial-gradient(#d2b48c 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #4b2e2e;
+        }
+
+        nav {
+            background-color: #4b2e2e;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #f5efe6;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            background-color: #6f4e37;
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .menu {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .coffee-card {
+            background-color: #fffaf3;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .coffee-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .coffee-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .coffee-card h3 {
+            margin: 15px 15px 5px;
+            color: #6f4e37;
+        }
+
+        .coffee-card p {
+            margin: 0 15px 10px;
+        }
+
+        .coffee-card button {
+            margin: 10px 15px 20px;
+            padding: 8px 15px;
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .coffee-card button:hover {
+            background-color: #4b2e2e;
+        }
+
+        footer {
+            background-color: #6f4e37;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>☕ Brown Bean Coffee House – Release 2</h1>
+        <p>Professional Coffee • Premium Beans • Perfect Taste</p>
+    </header>
+
+    <!-- Menu -->
+    <section class="menu">
+
+        <script>
+            const coffees = [
+                { name: "Espresso", price: "3.00 JD" },
+                { name: "Double Espresso", price: "3.50 JD" },
+                { name: "Americano", price: "3.50 JD" },
+                { name: "Cappuccino", price: "4.00 JD" },
+                { name: "Latte", price: "4.50 JD" },
+                { name: "Flat White", price: "4.50 JD" },
+                { name: "Mocha", price: "5.00 JD" },
+                { name: "White Mocha", price: "5.50 JD" },
+                { name: "Caramel Macchiato", price: "5.00 JD" },
+                { name: "Vanilla Latte", price: "4.75 JD" }
+            ];
+
+            coffees.forEach(coffee => {
+                document.write(`
+                    <div class="coffee-card">
+                        <img src="https://source.unsplash.com/400x300/?coffee,${coffee.name}">
+                        <h3>${coffee.name}</h3>
+                        <p>Price: ${coffee.price}</p>
+                        <button>Order Now</button>
+                    </div>
+                `);
+            });
+        </script>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Brown Bean Coffee House • Release 2</p>
+    </footer>
+
+</body>
+</html>
